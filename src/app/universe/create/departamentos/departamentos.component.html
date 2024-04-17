@@ -1,1 +1,44 @@
-<p>departamentos works!</p>
+<body>
+    
+
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+        <div class="form">
+            <form (ngSubmit)="insertData()">
+                <div class="form-header" >
+                    <div class="title" >
+                        <h1>Departamento</h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Nome do Departamento:</label>
+                        <input type="text" name="nome" placeholder="Nome do Departamento" required [(ngModel)]="departamento.nome">
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="firstname">Nº de Funcionarios:</label>
+                        <input type="number" name="n_funcionarios" placeholder="Nº de Funcionarios:" required [(ngModel)]="departamento.n_funcionarios">
+                    </div>
+    
+                   
+    
+                    
+                  
+                   
+    
+                    
+                </div>
+    
+            
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar-se</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>

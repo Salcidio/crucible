@@ -14,9 +14,10 @@ import { ProfessoresComponent } from './universe/create/professores/professores.
 import { RepositoriosComponent } from './universe/create/repositorios/repositorios.component';
 import { TurmasComponent } from './universe/create/turmas/turmas.component';
 import { UsersComponent } from './universe/create/users/users.component';
-
 const routes: Routes = [
-  {path:'',component:AppComponent,title:'Jecs.inc'},
+  {path:'',component:AppComponent,title:'jecs.inc'},
+
+  {path:'home',component:AppComponent,title:'Jecs.inc'},
 
 
   {path:'alunos',component:AlunosComponent,title:'Aluno'},

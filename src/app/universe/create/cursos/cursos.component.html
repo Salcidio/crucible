@@ -1,1 +1,36 @@
-<p>cursos works!</p>
+<body>
+    
+
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+        <div class="form">
+            <form (ngSubmit)="insertData()">
+                <div class="form-header" >
+                    <div class="title" >
+                        <h1>Curso</h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+                 
+                    <div class="input-box">
+                        <label for="firstname">Nome:</label>
+                        <input type="text" name="nome" placeholder="Nome do curso" required [(ngModel)]="curso.nome">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="number">Identificador do professor:</label>
+                        <input  type="number" name="professor_id" placeholder="Identificador do Professor" required  [(ngModel)]="curso.professor_id">
+                    </div>
+    
+                  </div>
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar-se</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>

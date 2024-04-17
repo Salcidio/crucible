@@ -1,1 +1,88 @@
-<p>users works!</p>
+<body>
+    
+
+<div class="container" >
+    <div class="form-image" >
+        <img src="../../../assets/3.gif" alt="">
+    </div>
+    <div class="form">
+        <form (ngSubmit)="insertData()">
+            <div class="form-header" >
+                <div class="title" >
+                    <h1>Resistar</h1>
+                </div>
+                
+            </div>
+
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="firstname">Nome:</label>
+                    <input type="text" name="nome" placeholder="Nome" required [(ngModel)]="user.nome">
+                </div>
+                <div class="input-box">
+                    <label for="firstname">Bilhete:</label>
+                    <input type="text" name="bilhete" placeholder="Identificador Pessoal" required [(ngModel)]="user.bilhete">
+                </div>
+
+                <div class="input-box">
+                    <label for="number">Telefone:</label>
+                    <input  type="number" name="telefone" placeholder="Digite o seu Telefone" required  [(ngModel)]="user.telefone">
+                </div>
+
+                <div class="input-box">
+                    <label for="number">Endereço:</label>
+                    <input  type="text" name="endereco" placeholder="Digite o seu Endereço" required  [(ngModel)]="user.endereco">
+                </div>
+              
+                <div class="input-box">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" placeholder="Digite seu E-mail" required  [(ngModel)]="user.email">
+                </div>
+
+              
+
+                <div class="input-box">
+                    <label for="password">Roles:</label>
+                    <input  type="text" name="Role" placeholder="Testing..." required [(ngModel)]="user.Role">
+                </div>
+
+
+                <div class="input-box">
+                    <label for="password">Senha:</label>
+                    <input  type="password" name="password" placeholder="Insira uam senha" required [(ngModel)]="user.password">
+                </div>
+
+            </div>
+
+            <div class="gender-inputs">
+                <div class="gender-title">
+                    <h6>Gênero</h6>
+                </div>
+
+                <div class="gender-group">
+                    <div class="gender-input">
+                        <input  type="radio" name="gender">
+                        <label for="female">Feminino</label>
+                    </div>
+
+                    <div class="gender-input">
+                        <input type="radio" name="gender">
+                        <label for="male">Masculino</label>
+                    </div>
+
+                   
+
+                    <div class="gender-input">
+                        <input  type="radio" name="gender">
+                        <label for="none">Restrito</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="continue-button" align="center">
+                <button type="submit">Resistar-se</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>

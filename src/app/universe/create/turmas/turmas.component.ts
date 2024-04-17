@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TurmaServiceService } from '../../services/turma-service.service';
 import { Turma } from '../../model/turma';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-turmas',
@@ -8,12 +9,12 @@ import { Turma } from '../../model/turma';
   styleUrl: './turmas.component.css'
 })
 export class TurmasComponent {
-  turmass:any;
-  turmas=new Turma();
+  turmas:any;
+  turma=new Turma();
 
 
   
-  constructor(private dataService:TurmaServiceService){}
+  constructor(private dataService:TurmaServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getTurmasData();
@@ -21,14 +22,17 @@ export class TurmasComponent {
 
   getTurmasData(){
     this.dataService.getData().subscribe(res=>{
-      this.turmass=res;
+      this.turmas=res;
 
     })
   }
 
  insertData(){
-  this.dataService.insertData(this.turmas).subscribe(res=>{
+  this.dataService.insertData(this.turma).subscribe(res=>{
     this.getTurmasData();
+    console.log('successfull')
+    this.router.navigate(['home'])
+
   })
 
 
@@ -37,6 +41,7 @@ export class TurmasComponent {
 deleteData(id:any){
 this.dataService.deleteData(id).subscribe(res=>{
   this.getTurmasData();
+  
 })
 }
 }

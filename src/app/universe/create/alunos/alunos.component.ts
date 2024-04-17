@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlunoServiceService } from '../../services/aluno-service.service';
 import { Aluno } from '../../model/aluno';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alunos',
@@ -14,7 +15,7 @@ export class AlunosComponent {
 
 
   
-  constructor(private dataService:AlunoServiceService){}
+  constructor(private dataService:AlunoServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getAlunoData();
@@ -30,6 +31,8 @@ export class AlunosComponent {
  insertData(){
   this.dataService.insertData(this.aluno).subscribe(res=>{
     this.getAlunoData();
+    console.log('successfull')
+    this.router.navigate(['home'])
   })
 
 

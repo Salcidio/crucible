@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CursoServiceService } from '../../services/curso-service.service';
 import { Curso } from '../../model/curso';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
@@ -13,7 +14,7 @@ export class CursosComponent {
 
 
   
-  constructor(private dataService:CursoServiceService){}
+  constructor(private dataService:CursoServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getCursoData();
@@ -29,6 +30,8 @@ export class CursosComponent {
  insertData(){
   this.dataService.insertData(this.curso).subscribe(res=>{
     this.getCursoData();
+    console.log('sucessfull')
+    this.router.navigate(['home'])
   })
 
 

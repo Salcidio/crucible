@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProfessorServiceService } from '../../services/professor-service.service';
 import { Professor } from '../../model/professor';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-professores',
@@ -13,7 +14,7 @@ export class ProfessoresComponent {
 
 
   
-  constructor(private dataService:ProfessorServiceService){}
+  constructor(private dataService:ProfessorServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getProfessorData();
@@ -29,6 +30,8 @@ export class ProfessoresComponent {
  insertData(){
   this.dataService.insertData(this.professor).subscribe(res=>{
     this.getProfessorData();
+    console.log("successfull")
+    this.router.navigate(['home'])
   })
 
 

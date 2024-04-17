@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserServiceService } from '../../services/user-service.service';
 import { User } from '../../model/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -13,10 +14,10 @@ export class UsersComponent {
 
 
   
-  constructor(private dataService:UserServiceService){}
+  constructor(private dataService:UserServiceService,private router:Router){}
 
   ngOnInit():void{
-    this.getUserData();
+  
   }
 
   getUserData(){
@@ -27,8 +28,10 @@ export class UsersComponent {
   }
 
  insertData(){
+  console.log(this.user)
   this.dataService.insertData(this.user).subscribe(res=>{
     this.getUserData();
+   this.router.navigate(['home']);
   })
 
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FuncionarioServiceService } from '../../services/funcionario-service.service';
 import { Funcionario } from '../../model/funcionario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-funcionarios',
@@ -13,7 +14,7 @@ export class FuncionariosComponent {
 
 
   
-  constructor(private dataService:FuncionarioServiceService){}
+  constructor(private dataService:FuncionarioServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getFuncionarioData();
@@ -29,6 +30,8 @@ export class FuncionariosComponent {
  insertData(){
   this.dataService.insertData(this.funcionario).subscribe(res=>{
     this.getFuncionarioData();
+    console.log('Sucessfull')
+    this.router.navigate(['home']);
   })
 
 

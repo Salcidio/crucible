@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PrecarioServiceService } from '../../services/precario-service.service';
 import { Precario } from '../../model/precario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-precarios',
@@ -13,7 +14,7 @@ export class PrecariosComponent {
 
 
   
-  constructor(private dataService:PrecarioServiceService){}
+  constructor(private dataService:PrecarioServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getPrecarioData();
@@ -26,9 +27,11 @@ export class PrecariosComponent {
     })
   }
 
- insertData(){
+    insertData(){
   this.dataService.insertData(this.precario).subscribe(res=>{
     this.getPrecarioData();
+    console.log('sucessfull')
+    this.router.navigate(['home']);
   })
 
 

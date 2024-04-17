@@ -19,6 +19,7 @@ import { FuncionariosComponent } from './universe/create/funcionarios/funcionari
 import { UsersUpdateComponent } from './universe/update/users-update/users-update.component';
 import { HomePageComponent } from './universe/home/home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 //                    --1
 
 @NgModule({
@@ -43,7 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule    
+    HttpClientModule,
+    FormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

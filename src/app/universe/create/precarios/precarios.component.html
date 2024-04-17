@@ -1,1 +1,47 @@
-<p>precarios works!</p>
+<body>
+    
+
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+        <div class="form">
+            <form (ngSubmit)="insertData()">
+                <div class="form-header" >
+                    <div class="title" >
+                        <h1>Precário</h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+                
+                    <div class="input-box">
+                        <label for="number">Curso:</label>
+                        <input  type="number" name="curso_id" placeholder="Identificador do curso" required  [(ngModel)]="precario.curso_id">
+                    </div>
+                  
+                    <div class="input-box">
+                        <label for="email">Preço:</label>
+                        <input type="email" name="preco" placeholder="Digite o preço do curso" required  [(ngModel)]="precario.preco">
+                    </div>
+    
+                  
+    
+                    <div class="input-box">
+                        <label for="password">Complementos:</label>
+                        <input  type="text" name="complementos" placeholder="complementos " required [(ngModel)]="precario.complementos">
+                    </div>
+    
+    
+                  
+    
+                </div>
+    
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar-se</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
