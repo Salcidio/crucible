@@ -1,0 +1,49 @@
+<body>
+    
+
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+        <div class="form">
+            <form (ngSubmit)="updateProfessor()">
+                <div class="form-header" >
+                    <div class="title" >
+                        <h1>Professor</h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Identificador:</label>
+                        <input type="number" name="id" placeholder="Identificador de ususario professor" required [(ngModel)]="professor.id">
+                    </div>
+                    <div class="input-box">
+                        <label for="firstname">Salario:</label>
+                        <input type="number" name="salario" placeholder="Salario do Professore" required [(ngModel)]="professor.salario">
+                    </div>
+                    <div class="input-box">
+                        <label for="firstname">Especialidade:</label>
+                        <input type="text" name="especialidade" placeholder="Escpecialidade " required [(ngModel)]="professor.especialidade">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="number">Departamento:</label>
+                        <input  type="number" name="departamento_id" placeholder="Identificador  Departamento " required  [(ngModel)]="professor.departamento_id">
+                    </div>
+    
+                
+    
+                </div>
+    
+              
+            
+    
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar-se</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>

@@ -1,0 +1,42 @@
+<body>
+    
+
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+        <div class="form">
+            <form (ngSubmit)="updateRepositorio()">
+                <div class="form-header" >
+                    <div class="title">
+                        <h1>Repositorio</h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+               
+                    
+                    <div class="input-box">
+                        <label for="firstname">Identificador do Aluno:</label>
+                        <input type="number" name="aluno_id" placeholder="Identificador do aluno" required [(ngModel)]="repositorio.aluno_id">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="firstname">Tarefa Json:</label>
+                        <input type="json" name="aluno_id" placeholder="formato json" required [(ngModel)]="repositorio.tarefa">
+                    </div>
+                  
+                
+                  
+                </div>
+    
+          
+    
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>

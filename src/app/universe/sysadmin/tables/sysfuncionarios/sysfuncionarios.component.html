@@ -1,0 +1,38 @@
+<body  style="background-color: #0c0ce94d;">
+    <div>
+        <main class="table" >
+        <section class="table__header">
+            <h1>Dados do Funcionario</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Procurar dados...">
+                <img src="assets/images/search.png" alt="pesquisar">
+            </div>
+        
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> ID de ususario</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let use of funcionarios">
+            
+                        <td>{{use.user_id}}</td>
+                       
+                         <th class="my"><a (click)="deleteFuncionarioData(use.user_id)" style="--clr:#1e9bff"><span >Apagar</span><i></i></a></th>
+                        <td ><a routerLink="funcionario/edit/{{use.user_id}}" style="--clr:#1e9bff"><span>Editar</span><i></i> </a></td>
+   
+                    </tr>
+                
+                </tbody>
+            </table>
+        </section>
+
+    
+    </main>
+</div>
+    
+</body>

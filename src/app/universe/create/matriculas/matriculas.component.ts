@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatriculaServiceService } from '../../services/matricula-service.service';
 import { Matricula } from '../../model/matricula';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-matriculas',
@@ -13,7 +14,7 @@ export class MatriculasComponent {
 
 
   
-  constructor(private dataService:MatriculaServiceService){}
+  constructor(private dataService:MatriculaServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getMatriculaData();
@@ -29,6 +30,8 @@ export class MatriculasComponent {
  insertData(){
   this.dataService.insertData(this.matricula).subscribe(res=>{
     this.getMatriculaData();
+    console.log('successfull')
+    this.router.navigate(['home'])
   })
 
 

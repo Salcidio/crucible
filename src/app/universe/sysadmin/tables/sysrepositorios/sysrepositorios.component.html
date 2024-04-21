@@ -1,0 +1,43 @@
+<body  style="background-color: #0c0ce94d;">
+    <div>
+        <main class="table" >
+        <section class="table__header">
+            <h1>Dados do repositorio</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Procurar dados...">
+                <img src="assets/images/search.png" alt="pesquisar">
+            </div>
+        
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> ID </th>
+                        <th> Id de aluno </th>
+                        <th> Investigações </th>
+                    
+                        <th> Acções </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let use of repositorios">
+            
+                        <td>{{use.id}}</td>
+                        <td>{{use.aluno_id}}</td>
+                        <td>{{use.tarefa}}</td>
+                     
+                         <th class="my"><a (click)="deleteRepositorioData(use.id)" style="--clr:#1e9bff"><span >Apagar</span><i></i></a></th>
+                        <td ><a routerLink="repositorio/edit/{{use.id}}" style="--clr:#1e9bff"><span>Editar</span><i></i> </a></td>
+   
+                    </tr>
+                
+                </tbody>
+            </table>
+        </section>
+
+    
+    </main>
+</div>
+    
+</body>

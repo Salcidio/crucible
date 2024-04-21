@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HistoricoEscolarServiceService } from '../../services/historico-escolar-service.service';
 import { HistoricoEscolar } from '../../model/historico-escolar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-historico-escolar',
@@ -13,7 +14,7 @@ export class HistoricoEscolarComponent {
 
 
   
-  constructor(private dataService:HistoricoEscolarServiceService){}
+  constructor(private dataService:HistoricoEscolarServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getHistoricoEscolarData();
@@ -29,6 +30,8 @@ export class HistoricoEscolarComponent {
  insertData(){
   this.dataService.insertData(this.historicoEscolar).subscribe(res=>{
     this.getHistoricoEscolarData();
+    console.log('sucessfull')
+    this.router.navigate(['home'])
   })
 
 

@@ -22,7 +22,7 @@ export class TurmaServiceService {
     return this.httpClient.get('http://127.0.0.1:8000/api/turma/'+id+'/edit');
 
   }
-  udateData(id:any,data:object){
+  updateData(id:any,data:object){
     return this.httpClient.patch('http://127.0.0.1:8000/api/turma/'+id,data);
 
   }

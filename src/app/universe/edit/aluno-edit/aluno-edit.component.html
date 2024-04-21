@@ -1,0 +1,45 @@
+<body>
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+
+        <div class="form">
+            <form (ngSubmit)="updateAluno()">
+                <div class="form-header" >
+                    <div class="title" >
+                        <h1>Turma</h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Identificador de usuario</label>
+                        <input type="number" name="id" placeholder="Identificador de usuario" required [(ngModel)]="aluno.id">
+                    </div>
+                    <div class="input-box">
+                        <label for="firstname">Identificador de Turma</label>
+                        <input type="number" name="curso_id" placeholder="Identificador de Turma" required [(ngModel)]="aluno.turma_id">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="number">Identificador de Curso:</label>
+                        <input  type="number" name="curso_id " placeholder="Identificador de Curso" required  [(ngModel)]="aluno.curso_id">
+                    </div>
+    
+                  
+                   
+                </div>
+    
+                
+           
+    
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar-se</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    </body>

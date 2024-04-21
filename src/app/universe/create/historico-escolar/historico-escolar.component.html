@@ -1,1 +1,47 @@
-<p>historico-escolar works!</p>
+<body>
+    
+
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+        <div class="form">
+            <form (ngSubmit)="insertData()">
+                <div class="form-header" >
+                    <div class="title">
+                        <h1>Historico Escolar</h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+               
+                    
+                    <div class="input-box">
+                        <label for="firstname">Identificador do Aluno:</label>
+                        <input type="number" name="aluno_id" placeholder="Identificador do aluno" required [(ngModel)]="historicoEscolar.aluno_id">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="firstname">Identificador de Turma:</label>
+                        <input type="number" name="turma_id"placeholder="Identificador da turma" required [(ngModel)]="historicoEscolar.turma_id">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="number">Nota:</label>
+                        <input  type="number" name="nota" placeholder="Digite a nota do  Aluno " required  [(ngModel)]="historicoEscolar.nota">
+                    </div>
+    
+                
+                  
+                </div>
+    
+          
+    
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ObjectUnsubscribedError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +18,7 @@ export class UserServiceService {
     return this.httpClient.delete('http://127.0.0.1:8000/api/user/'+id);
 
   }
-  getAlunoById(id:any){
+  getUserById(id:any){
     return this.httpClient.get('http://127.0.0.1:8000/api/user/'+id+'/edit')
   }
   updateData(id:any,data:Object){

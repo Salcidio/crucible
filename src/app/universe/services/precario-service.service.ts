@@ -22,7 +22,7 @@ export class PrecarioServiceService {
     return this.httpClient.get('http://127.0.0.1:8000/api/precario/'+id+'/edit');
 
   }
-  udateData(id:any,data:object){
+  updateData(id:any,data:object){
     return this.httpClient.patch('http://127.0.0.1:8000/api/precario/'+id,data);
 
   }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RepositorioServiceService } from '../../services/repositorio-service.service';
 import { Repositorio } from '../../model/repositorio';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-repositorios',
@@ -13,7 +14,7 @@ export class RepositoriosComponent {
 
 
   
-  constructor(private dataService:RepositorioServiceService){}
+  constructor(private dataService:RepositorioServiceService,private router:Router){}
 
   ngOnInit():void{
     this.getRepositorioData();
@@ -29,6 +30,8 @@ export class RepositoriosComponent {
  insertData(){
   this.dataService.insertData(this.repositorio).subscribe(res=>{
     this.getRepositorioData();
+    console.log('successfull')
+    this.router.navigate(['home'])
   })
 
 

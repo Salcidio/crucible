@@ -1,1 +1,43 @@
-<p>matriculas works!</p>
+<body>
+    
+
+    <div class="container" >
+        <div class="form-image" >
+            <img src="../../../assets/3.gif" alt="">
+        </div>
+        <div class="form">
+            <form (ngSubmit)="insertData()">
+                <div class="form-header" >
+                    <div class="title">
+                        <h1>Matricula </h1>
+                    </div>
+                    
+                </div>
+    
+                <div class="input-group">
+               
+                    
+                    <div class="input-box">
+                        <label for="firstname">Identificador do Aluno:</label>
+                        <input type="number" name="aluno_id" placeholder="Identificador do aluno" required [(ngModel)]="matricula.aluno_id">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="firstname">Identificador de Turma:</label>
+                        <input type="number" name="turma_id"placeholder="Identificador da turma" required [(ngModel)]="matricula.turma_id">
+                    </div>
+    
+                  
+                
+                  
+                </div>
+    
+          
+    
+                <div class="continue-button" align="center">
+                    <button type="submit">Resistar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
